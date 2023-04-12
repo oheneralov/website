@@ -30,6 +30,8 @@ COPY --from=builder /app/package.json ./package.json
 
 USER nextjs
 
+RUN npm i -g next
+
 EXPOSE 8080
 
 ENV PORT 8080

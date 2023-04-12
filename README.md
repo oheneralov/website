@@ -24,3 +24,6 @@ https://www.gyanblog.com/javascript/next-js-bootstrap-template-navbar-header/
 
 ![Screenshot Write Page](./screenshot-write.png)
 
+### nginx
+/etc/nginx/sites-available
+
