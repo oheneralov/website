@@ -4,8 +4,7 @@ import Head from 'next/head'
 import SimpleLayout from '../components/layout/simple'
 import ArticlesJumbo from '../components/general/articles'
 
-export default function Home(initialData) {
-  console.log('initialData ', initialData)
+export default function Home(initialData: any) {
   return (
     <SimpleLayout preContainer={<ArticlesJumbo menu="Home" />}>
         <div className="row">
@@ -21,7 +20,7 @@ export default function Home(initialData) {
 }
 
 // This gets called on every request
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: any) {
   const host = context.req.headers.host
   // Fetch data from external API
   const res = await fetch(`http://${host}/data.json`)
