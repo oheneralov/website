@@ -13,18 +13,15 @@ export default function Navbar() {
     <div className="collapse navbar-collapse" id="navbarsExample07XL">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-          <Link href="/">
-            <a className="nav-link">Home <span className="sr-only">(current)</span></a>
+          <Link href="/" className="nav-link">Home
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/sensory">
-            <a className="nav-link">Sensory substitution</a>
+          <Link href="/sensory" className="nav-link">Sensory
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/write">
-            <a className="nav-link">About</a>
+          <Link href="/write" className="nav-link">About
           </Link>
         </li>
       </ul>
