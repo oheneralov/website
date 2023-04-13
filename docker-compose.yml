@@ -4,9 +4,7 @@ services:
     build:
       context: ./
       target: deps
-    volumes:
-      - .:/app
-    command: sh -c "npm run dev"
+    command: sh -c "npm start"
     ports:
       - "8080:8080"
     environment:
