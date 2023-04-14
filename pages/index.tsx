@@ -11,8 +11,7 @@ export default function Home(initialData: any) {
         <h1>Overview</h1>
       </div>
       <div className="row">
-        <p>
-          {initialData.data.content.Home}
+        <p dangerouslySetInnerHTML={{ __html: initialData.data.content.Home }}>
         </p>
       </div>
     </SimpleLayout>
