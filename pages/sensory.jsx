@@ -4,18 +4,12 @@ import ArticlesJumbo from '../components/general/articles'
 
 export default function Sensory(initialData) {
   return (
-    <SimpleLayout preContainer={<ArticlesJumbo menu="Sensory substitution"  />}>
+    <SimpleLayout preContainer={<ArticlesJumbo menu="Sensory Substitution" />}>
+        <div className="row">
+        <h1>Sensory Substitution</h1>
+      </div>
       <div className="row">
-        <div className="col-md-4">
-          <div className="card mb-4 shadow-sm">
-            <Link href={`/#`}>
-              <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            </Link>
-            <div className="card-body">
-              <h3>Article 1</h3>
-              <p className="card-text">{initialData.data.content.Sensory}</p>
-            </div>
-          </div>
+        <div className="text-justify" dangerouslySetInnerHTML={{ __html: initialData.data.content.Sensory }}>
         </div>
       </div>
     </SimpleLayout>

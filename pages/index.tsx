@@ -11,8 +11,8 @@ export default function Home(initialData: any) {
         <h1>Overview</h1>
       </div>
       <div className="row">
-        <p dangerouslySetInnerHTML={{ __html: initialData.data.content.Home }}>
-        </p>
+        <div className="text-justify" dangerouslySetInnerHTML={{ __html: initialData.data.content.Home }}>
+        </div>
       </div>
     </SimpleLayout>
   )
