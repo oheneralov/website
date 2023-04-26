@@ -8,7 +8,7 @@ export default function SimpleLayout(props) {
       <main role="main">
         {props.preContainer && props.preContainer}
         <div className="album py-5 bg-light">
-          <div className="container">
+          <div className="container" style={{width:"92%"}}>
             {props.children}
           </div>
         </div>

@@ -1,39 +1,36 @@
-import React from 'react'
-import { Nav, Button } from 'react-bootstrap';
-import Link from 'next/link'
+// https://react-bootstrap.github.io/components/navbar/
+import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import {useRouter} from 'next/router';
 
-export default function Navbar() {
+
+export default function MainMenu() {
+  const router = useRouter()
+
+  const highlightMenuItem = (menuItem) => {
+    if (router.pathname === menuItem) {
+      console.log(router.pathname, '  ', menuItem)
+      return 'nav-item active'
+    } else{
+      return 'nav-item'
+    }
+
+  }
+
   return (
-    <Nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div className="container-xl">
-    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-
-    <div className="collapse navbar-collapse" id="navbarsExample07XL">
-      <ul className="navbar-nav mr-auto">
-        <li className="nav-item active">
-          <Link href="/" className="nav-link">Home
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link href="/sensory" className="nav-link">Sensory
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link href="/write" className="nav-link">About
-          </Link>
-        </li>
-      </ul>
-      <ul className="navbar-nav px-3">
-        <li className="nav-item text-nowrap">
-          <Button className="nav-link">
-              Signup
-          </Button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</Nav>
-  )
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">Menu</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/" className={highlightMenuItem('/')}>Home</Nav.Link>
+            <Nav.Link href="/sensory" className={highlightMenuItem('/sensory')}>Sensory Substitution</Nav.Link>
+            <Nav.Link href="/glasses" className={highlightMenuItem('/glasses')}>Ultrasonic Glasses</Nav.Link>
+            <Nav.Link href="/about" className={highlightMenuItem('/about')}>About</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
+
