@@ -8,10 +8,9 @@ export default function Write(initialData) {
         <h1>A few words about us</h1>
       </div>
       <div className="row">
-        <p>
-        {initialData.data.content.About}
-        </p>
-      </div>
+        <div className="text-justify" dangerouslySetInnerHTML={{ __html: initialData.data.content.About }}>
+        </div>
+        </div>
     </SimpleLayout>
   )
 }

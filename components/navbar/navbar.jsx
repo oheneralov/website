@@ -26,6 +26,7 @@ export default function MainMenu() {
             <Nav.Link href="/" className={highlightMenuItem('/')}>Home</Nav.Link>
             <Nav.Link href="/sensory" className={highlightMenuItem('/sensory')}>Sensory Substitution</Nav.Link>
             <Nav.Link href="/glasses" className={highlightMenuItem('/glasses')}>Ultrasonic Glasses</Nav.Link>
+            <Nav.Link href="/eyes" className={highlightMenuItem('/eyes')}>Bionic eyes</Nav.Link>
             <Nav.Link href="/about" className={highlightMenuItem('/about')}>About</Nav.Link>
           </Nav>
         </Navbar.Collapse>

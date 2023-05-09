@@ -1,0 +1,16 @@
+airplane  +
+automobile  +
+bird   +
+cat  +
+deer  +
+dog  +
+frog  +
+horse  +
+ship  +
+truck +
+
+chair
+door
+human
+powersocket
+stairs
